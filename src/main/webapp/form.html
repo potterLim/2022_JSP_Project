@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <title>HTML Form</title>
+</head>
+<body>
+<h1 style="text-align: center">사용자 정보 입력</h1>
+<br>
+<br>
+<form name="form" action="form_ok.jsp" method="post" onsubmit="return validate()" class="form-horizontal" style="width: 80%">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">이름</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" name="name" placeholder="이름">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">나이</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="age" name="age" placeholder="나이">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">휴대전화 번호</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="mobile" name="mobile" placeholder="휴대전화 번호">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">E-Mail</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="email" name="email" placeholder="E-Mail">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">주소</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="add" name="add" placeholder="주소">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">우편번호</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="postal" name="postal" placeholder="우편번호">
+        </div>
+    </div>
+    <div class="form-group" style="text-align: center">
+        <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+                <input type="checkbox" id="check" name="isCheck" value="1">
+                <label for="check">입력 정보 저장</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group" style="text-align: center">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">제출</button>
+        </div>
+    </div>
+</form>
+<script>
+    function validate(){
+        var name = document.form.name;
+        if(name.value == ""){
+            alert("이름을 입력해 주세요!");
+            name.focus();
+            return false;
+        }
+        var age = document.form.age;
+        if(age.value == ""){
+            alert("나이를 입력해 주세요!");
+            age.focus();
+            return false;
+        }
+        var mobile = document.form.mobile;
+        if(mobile.value == ""){
+            alert("휴대전화 번호를 입력해 주세요!");
+            mobile.focus();
+            return false;
+        }
+        var email = document.form.email;
+        if(email.value == ""){
+            alert("E-Mail을 입력해 주세요!");
+            email.focus();
+            return false;
+        }
+        var add = document.form.add;
+        if(add.value == ""){
+            alert("주소를 입력해 주세요!");
+            add.focus();
+            return false;
+        }
+        var postal = document.form.postal;
+        if(postal.value == ""){
+            alert("우편번호를 입력해 주세요!");
+            postal.focus();
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
